@@ -13,16 +13,8 @@ Tried multiple quizzes and the like. this seems like the best one in terms of br
 
 https://www.theadvocates.org/quiz/
 
+but it's overfocused on certain areas.
 
-## running this
-
-pip install -r requirements.txt
-uvicorn main:app --host 0.0.0.0 --port 8000
-
-
-curl -d "question1=agree&question2=disagree" -X POST http://localhost:8000/submit
-
-curl -X POST "http://localhost:8000/submit" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"speech\":\"agree\",\"military\":\"disagree\",\"sex\":\"agree\",\"drugs\":\"disagree\",\"immigration\":\"maybe\",\"loans\":\"disagree\",\"healthcare\":\"maybe\",\"retirement\":\"agree\",\"welfare\":\"disagree\",\"taxes\":\"agree\",\"politicalView\":\"libertarian\"}"
 
 ## what it sorta does
 
@@ -42,3 +34,13 @@ Proposition 15: Increasing Taxes on Large Businesses to Fund Public Schools:
 I think you would care moderately about this proposition and would likely vote no. You believe in limited government intervention and reducing taxes and government spending by 50% or more. This proposition would increase taxes on large businesses to fund public schools, which goes against your core libertarian beliefs. I estimate there is a 75% likelihood you would vote no on this proposition.
 ```
 etc..
+
+## running this
+
+pip install -r requirements.txt
+uvicorn main:app --host 0.0.0.0 --port 8000
+
+
+curl -d "question1=agree&question2=disagree" -X POST http://localhost:8000/submit
+
+curl -X POST "http://localhost:8000/submit" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"speech\":\"agree\",\"military\":\"disagree\",\"sex\":\"agree\",\"drugs\":\"disagree\",\"immigration\":\"maybe\",\"loans\":\"disagree\",\"healthcare\":\"maybe\",\"retirement\":\"agree\",\"welfare\":\"disagree\",\"taxes\":\"agree\",\"politicalView\":\"libertarian\"}"
