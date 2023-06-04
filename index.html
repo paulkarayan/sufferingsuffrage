@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Include Tailwind CSS via CDN -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="p-6 bg-gray-100">
+  <div class="w-full max-w-md mx-auto bg-white p-5 rounded-md shadow-sm">
+    <h1 class="text-2xl font-bold mb-5">Political Quiz</h1>
+    
+    <form id="quizForm">
+
+    <h3 class="text-lg font-semibold mb-2">Ask the Obvious</h3>
+    <div class="mb-4">
+        <!-- Libertarian -->
+        <label class="inline-flex items-center mr-4">
+          <input type="radio" class="form-radio text-blue-500" name="politicalView" value="libertarian">
+          <span class="ml-2">Libertarian</span>
+        </label>
+        <!-- Liberal -->
+        <label class="inline-flex items-center mr-4">
+          <input type="radio" class="form-radio text-blue-500" name="politicalView" value="liberal">
+          <span class="ml-2">Liberal</span>
+        </label>
+        <!-- Conservative -->
+        <label class="inline-flex items-center mr-4">
+          <input type="radio" class="form-radio text-blue-500" name="politicalView" value="conservative">
+          <span class="ml-2">Conservative</span>
+        </label>
+        <!-- Centrist -->
+        <label class="inline-flex items-center mr-4">
+          <input type="radio" class="form-radio text-blue-500" name="politicalView" value="centrist">
+          <span class="ml-2">Centrist</span>
+        </label>
+        <!-- Statist -->
+        <label class="inline-flex items-center mr-4">
+          <input type="radio" class="form-radio text-blue-500" name="politicalView" value="statist">
+          <span class="ml-2">Statist</span>
+        </label>
+        <!-- Not Sure -->
+        <label class="inline-flex items-center">
+          <input type="radio" class="form-radio text-blue-500" name="politicalView" value="notsure">
+          <span class="ml-2">Not Sure</span>
+        </label>
+    </div>
+
+    <h3 class="text-lg font-semibold mb-2">Personal Issues</h3>
+
+    <!-- Question 1 -->
+    <div class="mb-4">
+        <p class="mb-2">Government should not censor speech, press, media, or internet.</p>
+        <div>
+        <!-- Agree -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="government" value="agree">
+            <span class="ml-2">Agree</span>
+        </label>
+        <!-- Maybe -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="government" value="maybe">
+            <span class="ml-2">Maybe</span>
+        </label>
+        <!-- Disagree -->
+        <label class="inline-flex items-center">
+            <input type="radio" class="form-radio text-blue-500" name="government" value="disagree">
+            <span class="ml-2">Disagree</span>
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="mb-4">
+        <p class="mb-2">Military service should be voluntary. There should be no draft.</p>
+        <div>
+        <!-- Agree -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="military" value="agree">
+            <span class="ml-2">Agree</span>
+        </label>
+        <!-- Maybe -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="military" value="maybe">
+            <span class="ml-2">Maybe</span>
+        </label>
+        <!-- Disagree -->
+        <label class="inline-flex items-center">
+            <input type="radio" class="form-radio text-blue-500" name="military" value="disagree">
+            <span class="ml-2">Disagree</span>
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="mb-4">
+        <p class="mb-2">There should be no laws regarding sex for consenting adults.</p>
+        <div>
+        <!-- Agree -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="laws" value="agree">
+            <span class="ml-2">Agree</span>
+        </label>
+        <!-- Maybe -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="laws" value="maybe">
+            <span class="ml-2">Maybe</span>
+        </label>
+        <!-- Disagree -->
+        <label class="inline-flex items-center">
+            <input type="radio" class="form-radio text-blue-500" name="laws" value="disagree">
+            <span class="ml-2">Disagree</span>
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="mb-4">
+        <p class="mb-2">Repeal laws prohibiting adult possession and use of drugs.</p>
+        <div>
+        <!-- Agree -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="repeal" value="agree">
+            <span class="ml-2">Agree</span>
+        </label>
+        <!-- Maybe -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="repeal" value="maybe">
+            <span class="ml-2">Maybe</span>
+        </label>
+        <!-- Disagree -->
+        <label class="inline-flex items-center">
+            <input type="radio" class="form-radio text-blue-500" name="repeal" value="disagree">
+            <span class="ml-2">Disagree</span>
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="mb-4">
+        <p class="mb-2">Government should not target, detain, or deport undocumented workers.</p>
+        <div>
+        <!-- Agree -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="undocumented" value="agree">
+            <span class="ml-2">Agree</span>
+        </label>
+        <!-- Maybe -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="undocumented" value="maybe">
+            <span class="ml-2">Maybe</span>
+        </label>
+        <!-- Disagree -->
+        <label class="inline-flex items-center">
+            <input type="radio" class="form-radio text-blue-500" name="undocumented" value="disagree">
+            <span class="ml-2">Disagree</span>
+        </label>
+        </div>
+    </div>
+
+    <h3 class="text-lg font-semibold mb-2">Economic Issues</h3>
+ 
+    <!-- Question 6 -->
+    <div class="mb-4">
+        <p class="mb-2">Taxpayers should not be responsible for student loan debt.</p>
+        <div>
+        <!-- Agree -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="taxpayers" value="agree">
+            <span class="ml-2">Agree</span>
+        </label>
+        <!-- Maybe -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="taxpayers" value="maybe">
+            <span class="ml-2">Maybe</span>
+        </label>
+        <!-- Disagree -->
+        <label class="inline-flex items-center">
+            <input type="radio" class="form-radio text-blue-500" name="taxpayers" value="disagree">
+            <span class="ml-2">Disagree</span>
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="mb-4">
+        <p class="mb-2">Government should not be responsible for providing healthcare.</p>
+        <div>
+        <!-- Agree -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="healthcare" value="agree">
+            <span class="ml-2">Agree</span>
+        </label>
+        <!-- Maybe -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="healthcare" value="maybe">
+            <span class="ml-2">Maybe</span>
+        </label>
+        <!-- Disagree -->
+        <label class="inline-flex items-center">
+            <input type="radio" class="form-radio text-blue-500" name="healthcare" value="disagree">
+            <span class="ml-2">Disagree</span>
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="mb-4">
+        <p class="mb-2">Let people control their own retirement; privatize Social Security.</p>
+        <div>
+        <!-- Agree -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="retirement" value="agree">
+            <span class="ml-2">Agree</span>
+        </label>
+        <!-- Maybe -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="retirement" value="maybe">
+            <span class="ml-2">Maybe</span>
+        </label>
+        <!-- Disagree -->
+        <label class="inline-flex items-center">
+            <input type="radio" class="form-radio text-blue-500" name="retirement" value="disagree">
+            <span class="ml-2">Disagree</span>
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="mb-4">
+        <p class="mb-2">Replace government welfare with private charity.</p>
+        <div>
+        <!-- Agree -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="charity" value="agree">
+            <span class="ml-2">Agree</span>
+        </label>
+        <!-- Maybe -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="charity" value="maybe">
+            <span class="ml-2">Maybe</span>
+        </label>
+        <!-- Disagree -->
+        <label class="inline-flex items-center">
+            <input type="radio" class="form-radio text-blue-500" name="charity" value="disagree">
+            <span class="ml-2">Disagree</span>
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="mb-4">
+        <p class="mb-2">Cut taxes and government spending by 50% or more.</p>
+        <div>
+        <!-- Agree -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="cuttaxes" value="agree">
+            <span class="ml-2">Agree</span>
+        </label>
+        <!-- Maybe -->
+        <label class="inline-flex items-center mr-4">
+            <input type="radio" class="form-radio text-blue-500" name="cuttaxes" value="maybe">
+            <span class="ml-2">Maybe</span>
+        </label>
+        <!-- Disagree -->
+        <label class="inline-flex items-center">
+            <input type="radio" class="form-radio text-blue-500" name="cuttaxes" value="disagree">
+            <span class="ml-2">Disagree</span>
+        </label>
+        </div>
+    </div>
+
+      <button type="submit" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Submit</button>
+    </form>
+  </div>
+
+
+  <script>
+        // First, select the form.
+        const quizForm = document.querySelector('#quizForm');
+
+        quizForm.addEventListener('submit', function(e) {
+        // Prevent the form from submitting normally.
+        e.preventDefault();
+
+        // Create an object to hold the form data.
+        let formData = {};
+
+        // Loop through the form elements and add their names and values to the formData object.
+        for (let element of quizForm.elements) {
+            if (element.name) {
+            formData[element.name] = element.value;
+            }
+        }
+
+        // Send the form data as a POST request.
+        fetch('http://localhost:8000/submit', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+        });
+
+  </script>
+
+</body>
+</html>
