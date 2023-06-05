@@ -17,8 +17,7 @@ app = FastAPI()
 
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
-SECRET_KEY = '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'  # Replace with your secret key for ChatGPT API
-openai.api_key = SECRET_KEY
+
 
 # Add CORS middleware to allow all origins, and expose necessary headers
 app.add_middleware(
