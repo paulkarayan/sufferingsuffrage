@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from typing import Optional
 
 import openai
-
+import os
 
 
 # Configure logging
@@ -17,7 +17,8 @@ app = FastAPI()
 
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
-
+SECRET_KEY = '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'  # Replace with your secret key for ChatGPT API
+openai.api_key = SECRET_KEY
 
 # Add CORS middleware to allow all origins, and expose necessary headers
 app.add_middleware(
@@ -94,15 +95,25 @@ async def submit(quiz_response: QuizResponse):
     \n
     """
 
-    print(background_prompt)
 
-    thing_to_evaluate = """
-    on the 2022 california ballot measures here: 
-    https://calmatters.org/explainers/california-ballot-measures-2022/ 
-    please rank how much you think i would care, tell me what you think i'd vote
-    and why you think i'd vote that way 
-    and give an estimated % likelihood that your voting suggestion is accurate. 
+    legislation_prompt = """
+https://ballotpedia.org/California_Proposition_1,_Right_to_Reproductive_Freedom_Amendment_(2022)
+    """
+
+    thing_to_evaluate = f"""
+    on the legislation described here: 
+    {legislation_prompt}
+    1. if it is a url, use the web browser plugin to get the text of the legislation. 
+       otherwise use the text provided
+    2. describe the legislation in 1 sentence including its name,
+    3. rank how much you think i would care
+    4. tell me what you think i'd vote
+    5. tell me why you think i'd vote that way 
+    6. give an estimated percent likelihood that your voting suggestion is accurate. 
     separate the responses with new lines"""
+
+    print(background_prompt + thing_to_evaluate)
+
 
     response = openai.Completion.create(
         model="text-davinci-003",

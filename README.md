@@ -1,7 +1,3 @@
-# Suffering Suffrage
-
-Make sure you say it like Looney Toons!
-
 # Infranchise
 
 Intelligent Enfranchisement

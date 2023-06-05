@@ -377,3 +377,314 @@ INFO:uvicorn.error:Shutting down
 INFO:uvicorn.error:Waiting for application shutdown.
 INFO:uvicorn.error:Application shutdown complete.
 INFO:uvicorn.error:Finished server process [51174]
+INFO:uvicorn.error:Started server process [2729]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/uvicorn/protocols/http/httptools_impl.py", line 378, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/fastapi/applications.py", line 212, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/starlette/middleware/cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/fastapi/routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/pk/SufferingSuffarage/./main.py", line 111, in submit
+    response = openai.Completion.create(
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/openai/api_resources/completion.py", line 31, in create
+    return super().create(*args, **kwargs)
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 92, in create
+    requestor = api_requestor.APIRequestor(
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/openai/api_requestor.py", line 85, in __init__
+    self.api_key = key or util.default_api_key()
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/openai/util.py", line 183, in default_api_key
+    raise openai.error.AuthenticationError(
+openai.error.AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://onboard.openai.com for details, or email support@openai.com if you have any questions.
+INFO:uvicorn.error:Shutting down
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+INFO:uvicorn.error:Finished server process [2729]
+INFO:uvicorn.error:Started server process [2850]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/completions
+INFO:openai:message='OpenAI API response' path=https://api.openai.com/v1/completions processing_ms=5084 response_code=200
+INFO:root:ChatGPT API response: {
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "text": "\n\nI would care a great deal, and I think I would vote in favor of the legislation. I believe this because it promotes policies that I support, such as protecting free speech and repealing laws regarding drug use. I estimate that the likelihood of my voting in favor of the legislation is 80%."
+    }
+  ],
+  "created": 1685996492,
+  "id": "cmpl-7OAzkAaYbjQmn7WZCfXXATX0sXPEm",
+  "model": "text-davinci-003",
+  "object": "text_completion",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 286,
+    "total_tokens": 346
+  }
+}
+INFO:uvicorn.error:Shutting down
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+INFO:uvicorn.error:Finished server process [2850]
+INFO:uvicorn.error:Started server process [3054]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/completions
+INFO:openai:message='OpenAI API response' path=https://api.openai.com/v1/completions processing_ms=7599 response_code=200
+INFO:root:ChatGPT API response: {
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "text": ".\n\nI would likely vote against {legislation_prompt} because it goes against my libertarian values. I believe this legislation would encroach upon individual liberty and increase the size and scope of government. I estimate my opinion has an 80% likelihood of being accurate."
+    }
+  ],
+  "created": 1685996583,
+  "id": "cmpl-7OB1DhbyhV4rpulFvtzUrjEZTD9sV",
+  "model": "text-davinci-003",
+  "object": "text_completion",
+  "usage": {
+    "completion_tokens": 56,
+    "prompt_tokens": 285,
+    "total_tokens": 341
+  }
+}
+INFO:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/completions
+INFO:openai:message='OpenAI API response' path=https://api.openai.com/v1/completions processing_ms=9725 response_code=200
+INFO:root:ChatGPT API response: {
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "text": "\n\nI think you would care a lot about this legislation and would likely vote in favor of it. I believe there is an 80% likelihood that you would vote in favor of it because it aligns with your political views of libertarianism. Your views on free speech, adult freedoms, and government spending suggest that you would be in favor of this legislation."
+    }
+  ],
+  "created": 1685996653,
+  "id": "cmpl-7OB2Lq8ouQzCsha8qQL0PPc5cW7t4",
+  "model": "text-davinci-003",
+  "object": "text_completion",
+  "usage": {
+    "completion_tokens": 72,
+    "prompt_tokens": 285,
+    "total_tokens": 357
+  }
+}
+INFO:uvicorn.error:Shutting down
+INFO:uvicorn.error:Finished server process [3054]
+ERROR:uvicorn.error:Traceback (most recent call last):
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/starlette/routing.py", line 624, in lifespan
+    await receive()
+  File "/Users/pk/Library/Python/3.9/lib/python/site-packages/uvicorn/lifespan/on.py", line 135, in receive
+    return await self.receive_queue.get()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/queues.py", line 166, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+INFO:uvicorn.error:Started server process [3699]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/completions
+INFO:openai:message='OpenAI API response' path=https://api.openai.com/v1/completions processing_ms=8503 response_code=200
+INFO:root:ChatGPT API response: {
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "text": "\n\nThe legislation is called {name_of_legislation}, and it is a {description_of_legislation}. I think you would care a lot about this issue, and I believe you would vote against it because it goes against your libertarian beliefs. I estimate there is a 90% chance that my voting suggestion is accurate."
+    }
+  ],
+  "created": 1685996674,
+  "id": "cmpl-7OB2gQ5aBEYqjeif4ghdDBV8LHDb7",
+  "model": "text-davinci-003",
+  "object": "text_completion",
+  "usage": {
+    "completion_tokens": 70,
+    "prompt_tokens": 297,
+    "total_tokens": 367
+  }
+}
+INFO:uvicorn.error:Shutting down
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+INFO:uvicorn.error:Finished server process [3699]
+INFO:uvicorn.error:Started server process [4096]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/completions
+INFO:openai:message='OpenAI API response' path=https://api.openai.com/v1/completions processing_ms=6837 response_code=200
+INFO:root:ChatGPT API response: {
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "text": "\n\nThe legislation is called {legislation_name}, and it seeks to {legislation_details}. As a libertarian, I would be strongly against it and would likely vote against it. I think the likelihood that I would vote against it is 90%."
+    }
+  ],
+  "created": 1685996726,
+  "id": "cmpl-7OB3WH69G9Y7LnBnyI9TURlY865ze",
+  "model": "text-davinci-003",
+  "object": "text_completion",
+  "usage": {
+    "completion_tokens": 54,
+    "prompt_tokens": 297,
+    "total_tokens": 351
+  }
+}
+INFO:uvicorn.error:Shutting down
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+INFO:uvicorn.error:Finished server process [4096]
+INFO:uvicorn.error:Started server process [4391]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/completions
+INFO:openai:message='OpenAI API response' path=https://api.openai.com/v1/completions processing_ms=11905 response_code=200
+INFO:root:ChatGPT API response: {
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "text": "\n\n{legislation_prompt}\n\nThe American Clean Energy and Security Act of 2009\n\nThis legislation seeks to reduce greenhouse gas emissions by establishing a cap and trade system.\n\nI would care about this legislation: 4\nI would vote: Yes\nI would vote yes because this legislation is an important step towards reducing greenhouse gas emissions, which are a major contributor to climate change.\nI estimate that my voting suggestion is 80% likely to be accurate."
+    }
+  ],
+  "created": 1685996778,
+  "id": "cmpl-7OB4MvXVIEbX9n4Al5jUfvER0WqC1",
+  "model": "text-davinci-003",
+  "object": "text_completion",
+  "usage": {
+    "completion_tokens": 97,
+    "prompt_tokens": 322,
+    "total_tokens": 419
+  }
+}
+INFO:uvicorn.error:Shutting down
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+INFO:uvicorn.error:Finished server process [4391]
+INFO:uvicorn.error:Started server process [6389]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/completions
+INFO:openai:message='OpenAI API response' path=https://api.openai.com/v1/completions processing_ms=4064 response_code=200
+INFO:root:ChatGPT API response: {
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "text": "\n\nThe Tax Cut and Jobs Act of 2017\nI would rank this legislation a 7 out of 10 for importance. I think you would vote to support this legislation, since it reduces taxes and government spending. I estimate there is an 80% likelihood that my voting suggestion is accurate."
+    }
+  ],
+  "created": 1685997238,
+  "id": "cmpl-7OBBmKqu0bfQyqu2HToxtn3DEGmaV",
+  "model": "text-davinci-003",
+  "object": "text_completion",
+  "usage": {
+    "completion_tokens": 57,
+    "prompt_tokens": 338,
+    "total_tokens": 395
+  }
+}
+INFO:uvicorn.error:Shutting down
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+INFO:uvicorn.error:Finished server process [6389]
+INFO:uvicorn.error:Started server process [6660]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/completions
+INFO:uvicorn.error:Started server process [6717]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+ERROR:uvicorn.error:[Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+INFO:uvicorn.error:Started server process [6779]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+ERROR:uvicorn.error:[Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+INFO:uvicorn.error:Started server process [6808]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+ERROR:uvicorn.error:[Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+INFO:uvicorn.error:Started server process [6957]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+ERROR:uvicorn.error:[Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+INFO:uvicorn.error:Started server process [7114]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/completions
+INFO:openai:message='OpenAI API response' path=https://api.openai.com/v1/completions processing_ms=10960 response_code=200
+INFO:root:ChatGPT API response: {
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "text": " \n\nCalifornia Proposition 1, Right to Reproductive Freedom Amendment (2022) is a proposed amendment to the California Constitution that would guarantee a right to reproductive freedom and access to abortion services.\n\nI think you would care a lot about this.\n\nI think you would vote in favor of the amendment.\n\nI think you would vote in favor of the amendment because it would guarantee a right to reproductive freedom and access to abortion services.\n\nI estimate that my voting suggestion is 80% likely to be accurate."
+    }
+  ],
+  "created": 1685997326,
+  "id": "cmpl-7OBDCqHdXg2Ay1XrmcXIaG5vcHGOQ",
+  "model": "text-davinci-003",
+  "object": "text_completion",
+  "usage": {
+    "completion_tokens": 107,
+    "prompt_tokens": 365,
+    "total_tokens": 472
+  }
+}
+INFO:uvicorn.error:Shutting down
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+INFO:uvicorn.error:Finished server process [7114]
