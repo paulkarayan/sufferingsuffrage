@@ -40,7 +40,4 @@ etc..
 pip install -r requirements.txt
 uvicorn main:app --host 0.0.0.0 --port 8000
 
-
-curl -d "question1=agree&question2=disagree" -X POST http://localhost:8000/submit
-
 curl -X POST "http://localhost:8000/submit" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"speech\":\"agree\",\"military\":\"disagree\",\"sex\":\"agree\",\"drugs\":\"disagree\",\"immigration\":\"maybe\",\"loans\":\"disagree\",\"healthcare\":\"maybe\",\"retirement\":\"agree\",\"welfare\":\"disagree\",\"taxes\":\"agree\",\"politicalView\":\"libertarian\"}"
