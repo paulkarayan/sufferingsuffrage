@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+import os
 import logging
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
