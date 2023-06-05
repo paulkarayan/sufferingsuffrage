@@ -37,6 +37,4 @@ pip install -r requirements.txt
 uvicorn main:app --host 0.0.0.0 --port 8000
 
 
-curl -d "question1=agree&question2=disagree" -X POST http://localhost:8000/submit
-
-curl -X POST "http://localhost:8000/submit" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"speech\":\"agree\",\"military\":\"disagree\",\"sex\":\"agree\",\"drugs\":\"disagree\",\"immigration\":\"maybe\",\"loans\":\"disagree\",\"healthcare\":\"maybe\",\"retirement\":\"agree\",\"welfare\":\"disagree\",\"taxes\":\"agree\",\"politicalView\":\"libertarian\"}"
+curl -X POST "http://localhost:8000/submit" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"q1\":\"2\",\"q1_1\":\"2\",\"q2\":\"1\",\"q3\":\"1\",\"q4\":\"2\",\"q5\":\"1\",\"q6\":\"1\",\"q7\":\"4\",\"q8_1\":\"90\",\"q8_2\":\"10\",\"q9\":\"3\",\"q10_1\":\"3\",\"q10_2\":\"1\",\"q11\":\"1\",\"q12\":\"1\",\"q13\":\"1\",\"q14\":\"1\",\"q15\":\"1\",\"q16\":\"2\"}"
